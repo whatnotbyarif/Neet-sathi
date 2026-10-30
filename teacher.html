@@ -5,73 +5,137 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dhruva Sir | NEET Saathi</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f4f5ff;color:#182044}
-header{background:#101735;color:white;padding:20px}
-header h2{margin:0;color:#a99aff}
-header p{margin:8px 0 0;font-size:14px}
-main{max-width:760px;margin:25px auto;padding:16px}
-.card{background:white;border-radius:18px;padding:22px;box-shadow:0 5px 20px #18204412}
-.teacher{text-align:center;background:linear-gradient(135deg,#111936,#30216b);color:white}
-.avatar{font-size:65px}
-.teacher h1{margin:8px 0;color:#c0aaff}
-.badge{display:inline-block;background:#164e45;color:#8ef0cf;padding:7px 12px;border-radius:20px;font-size:12px}
-label{display:block;margin:20px 0 8px;font-weight:bold}
-select,textarea{width:100%;padding:13px;border:1px solid #d9dcef;border-radius:10px;font-size:16px}
-textarea{height:120px;resize:vertical}
-button{border:0;border-radius:10px;background:#7350ed;color:white;padding:14px 18px;font-size:16px;font-weight:bold;width:100%;margin-top:12px}
-#answer{display:none;margin-top:18px;background:#f0edff;padding:16px;border-radius:12px;line-height:1.6}
-.small{font-size:13px;color:#6b7280;line-height:1.5}
-a{color:#c0aaff}
+body{margin:0;font-family:Arial,sans-serif;background:#f3f4ff;color:#182044}
+header{background:#101735;color:white;padding:16px}
+header h2{margin:0;color:#b5a0ff}
+header a{color:white;text-decoration:none;font-size:14px}
+.container{max-width:850px;margin:auto;padding:18px}
+.hero{background:linear-gradient(135deg,#101735,#352176);color:white;border-radius:22px;padding:25px 18px;text-align:center}
+.avatar{font-size:70px}
+.hero h1{font-size:29px;margin:10px 0;color:#c4b5fd}
+.hero p{line-height:1.6;color:#e0e7ff}
+.status{display:inline-block;background:#174c43;color:#a7f3d0;border-radius:20px;padding:8px 13px;font-size:13px}
+.card{background:white;padding:22px;border-radius:18px;margin-top:18px;box-shadow:0 5px 22px #1725540d}
+h2{font-size:21px;margin-top:0}
+label{display:block;font-weight:bold;margin:18px 0 8px}
+select,textarea{width:100%;padding:14px;border:1px solid #d7d9eb;border-radius:12px;font-size:16px;background:white;color:#182044}
+textarea{height:130px;resize:vertical}
+button{border:0;border-radius:12px;padding:14px;font-size:16px;font-weight:bold;cursor:pointer}
+.primary{background:#7650ed;color:white;width:100%;margin-top:12px}
+.secondary{background:#eeeaff;color:#4c35ad;width:100%;margin-top:10px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.note{font-size:13px;color:#6b7280;line-height:1.6}
+#reply{display:none;margin-top:16px;padding:15px;background:#f0edff;border-radius:12px;line-height:1.6;overflow-wrap:anywhere}
+footer{text-align:center;color:#777;font-size:12px;padding:25px}
+@media(max-width:480px){
+.container{padding:12px}
+.hero{padding:22px 14px}
+.hero h1{font-size:25px}
+.card{padding:17px}
+.row{grid-template-columns:1fr}
+}
 </style>
 </head>
+
 <body>
 <header>
   <h2>🎓 NEET Saathi</h2>
   <p><a href="index.html">← Home Page पर वापस जाएँ</a></p>
 </header>
 
-<main>
-  <section class="card teacher">
+<main class="container">
+  <section class="hero">
     <div class="avatar">👨‍🏫</div>
     <h1>Dhruva Sir</h1>
-    <p>आपके NEET के सभी विषयों के शिक्षक</p>
-    <span class="badge">● Study Mode</span>
+    <p>आपका AI Study Teacher<br>Physics • Chemistry • Biology</p>
+    <span class="status">● Study Assistant</span>
   </section>
 
-  <section class="card" style="margin-top:18px">
+  <section class="card">
     <h2>📚 आज क्या पढ़ना है?</h2>
-    <p>अपना विषय चुनें और सवाल लिखें।</p>
+    <p>विषय चुनें और अपना सवाल लिखें।</p>
 
-    <label for="subject">विषय चुनें</label>
+    <label for="subject">अपना विषय चुनें</label>
     <select id="subject">
-      <option>Physics</option>
-      <option>Chemistry</option>
-      <option>Biology</option>
+      <option value="Physics">⚡ Physics</option>
+      <option value="Chemistry">🧪 Chemistry</option>
+      <option value="Biology">🧬 Biology</option>
     </select>
 
     <label for="question">अपना सवाल लिखें</label>
-    <textarea id="question" placeholder="उदाहरण: न्यूटन का दूसरा नियम समझाइए..."></textarea>
+    <textarea id="question" placeholder="उदाहरण: न्यूटन का दूसरा नियम आसान भाषा में समझाइए..."></textarea>
 
-    <button onclick="askQuestion()">सवाल सबमिट करें →</button>
+    <div class="row">
+      <button class="secondary" onclick="startVoice()">🎤 बोलकर सवाल लिखें</button>
+      <button class="secondary" onclick="clearQuestion()">🗑️ सवाल हटाएँ</button>
+    </div>
 
-    <div id="answer" role="status"></div>
-    <p class="small">ध्यान दें: यह शुरुआती संस्करण है। असली AI उत्तर देने की सुविधा अभी कनेक्ट नहीं हुई है।</p>
+    <button class="primary" onclick="askQuestion()">सवाल पूछें →</button>
+
+    <div id="reply" role="status" aria-live="polite"></div>
+
+    <p class="note">
+      नोट: अभी यह शुरुआती संस्करण है। असली AI उत्तर पाने के लिए सुरक्षित AI बैकएंड कनेक्ट करना बाकी है।
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>💡 पढ़ाई के लिए टिप</h2>
+    <p>पहले कॉन्सेप्ट समझें, फिर NCERT पढ़ें और अंत में NEET के प्रश्नों का अभ्यास करें।</p>
   </section>
 </main>
 
+<footer>
+NEET Saathi • Learn with clarity. Practise with confidence.
+</footer>
+
 <script>
 function askQuestion(){
-  const q=document.getElementById('question').value.trim();
-  const subject=document.getElementById('subject').value;
-  const box=document.getElementById('answer');
-  box.style.display='block';
-  if(!q){
-    box.textContent='कृपया पहले अपना सवाल लिखें।';
+  const question=document.getElementById("question").value.trim();
+  const subject=document.getElementById("subject").value;
+  const reply=document.getElementById("reply");
+
+  reply.style.display="block";
+
+  if(!question){
+    reply.textContent="पहले अपना सवाल लिखिए, फिर 'सवाल पूछें' दबाइए।";
     return;
   }
-  box.textContent='आपका '+subject+' का सवाल दर्ज हो गया है। Dhruva Sir से असली AI उत्तर पाने के लिए अगले चरण में AI कनेक्ट करेंगे।';
+
+  reply.textContent="आपका "+subject+" का सवाल दर्ज हो गया है। Dhruva Sir के असली AI उत्तर पाने के लिए AI बैकएंड कनेक्ट करना अभी बाकी है।";
+}
+
+function clearQuestion(){
+  document.getElementById("question").value="";
+  document.getElementById("reply").style.display="none";
+}
+
+function startVoice(){
+  const SpeechRecognition=window.SpeechRecognition||window.webkitSpeechRecognition;
+
+  if(!SpeechRecognition){
+    alert("आपके ब्राउज़र में Voice Input उपलब्ध नहीं है। कृपया Chrome के नए संस्करण में कोशिश करें या सवाल टाइप करें।");
+    return;
+  }
+
+  const recognition=new SpeechRecognition();
+  recognition.lang="hi-IN";
+  recognition.interimResults=false;
+
+  recognition.onresult=function(event){
+    const text=event.results[0][0].transcript;
+    const box=document.getElementById("question");
+    box.value=(box.value ? box.value+" " : "")+text;
+  };
+
+  recognition.onerror=function(){
+    alert("आवाज़ पहचानने में परेशानी हुई। माइक्रोफोन की अनुमति जाँचें या सवाल टाइप करें।");
+  };
+
+  recognition.start();
 }
 </script>
 </body>
