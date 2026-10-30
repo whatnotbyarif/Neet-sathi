@@ -1,0 +1,351 @@
+```html
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101735">
+  <meta name="description" content="NEET Saathi Dhruva Sir Study Assistant">
+  <title>Dhruva Sir | NEET Saathi</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f3f4ff;
+      color: #182044;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header {
+      background: #101735;
+      color: white;
+      padding: 18px 20px;
+    }
+
+    .brand {
+      font-size: 21px;
+      font-weight: bold;
+      color: #b8a6ff;
+      margin: 0 0 12px;
+    }
+
+    .back-link {
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 760px;
+      margin: auto;
+      padding: 20px 14px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #101735, #352176);
+      color: white;
+      text-align: center;
+      padding: 28px 18px;
+      border-radius: 22px;
+    }
+
+    .avatar {
+      font-size: 70px;
+      margin-bottom: 8px;
+    }
+
+    .hero h1 {
+      color: #c4b5fd;
+      font-size: 30px;
+      margin: 8px 0;
+    }
+
+    .hero p {
+      color: #e0e7ff;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #174c43;
+      color: #a7f3d0;
+      padding: 8px 13px;
+      border-radius: 30px;
+      font-size: 12px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e4e6f5;
+      border-radius: 18px;
+      padding: 22px;
+      margin-top: 18px;
+      box-shadow: 0 5px 20px #1017350a;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 21px;
+    }
+
+    .description {
+      color: #6b7191;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    label {
+      display: block;
+      margin: 20px 0 8px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d8dcef;
+      border-radius: 12px;
+      background: white;
+      color: #182044;
+      font-size: 16px;
+      font-family: inherit;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+      line-height: 1.6;
+    }
+
+    button {
+      border: 0;
+      border-radius: 11px;
+      padding: 14px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .voice-button {
+      width: 100%;
+      margin-top: 10px;
+      background: #eeeaff;
+      color: #4d35b0;
+    }
+
+    .ask-button {
+      width: 100%;
+      margin-top: 12px;
+      background: #7650ed;
+      color: white;
+    }
+
+    .clear-button {
+      width: 100%;
+      margin-top: 10px;
+      background: #f1f2f9;
+      color: #39415f;
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid #8b7af5;
+      outline-offset: 3px;
+    }
+
+    #response {
+      display: none;
+      margin-top: 18px;
+      padding: 16px;
+      border-radius: 12px;
+      background: #f0edff;
+      color: #292050;
+      line-height: 1.7;
+      overflow-wrap: anywhere;
+    }
+
+    .notice {
+      margin-top: 16px;
+      font-size: 12px;
+      color: #747991;
+      line-height: 1.7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 14px;
+      font-size: 12px;
+      color: #8589a6;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding: 14px 12px;
+      }
+
+      .hero {
+        padding: 24px 14px;
+      }
+
+      .hero h1 {
+        font-size: 26px;
+      }
+
+      .card {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="brand">🎓 NEET Saathi</div>
+    <a class="back-link" href="index.html">← Home Page पर वापस जाएँ</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="avatar" aria-hidden="true">👨‍🏫</div>
+      <h1>Dhruva Sir</h1>
+      <p>
+        आपका NEET Study Assistant<br>
+        Physics · Chemistry · Biology
+      </p>
+      <span class="badge">● Study Mode</span>
+    </section>
+
+    <section class="card">
+      <h2>📚 अपना सवाल पूछें</h2>
+      <p class="description">
+        विषय चुनें और अपना सवाल लिखें। आप चाहें तो बोलकर भी सवाल दर्ज कर सकते हैं।
+      </p>
+
+      <label for="subject">विषय चुनें</label>
+      <select id="subject">
+        <option value="Physics">⚡ Physics</option>
+        <option value="Chemistry">🧪 Chemistry</option>
+        <option value="Biology">🧬 Biology</option>
+      </select>
+
+      <label for="question">आपका सवाल</label>
+      <textarea
+        id="question"
+        placeholder="उदाहरण: न्यूटन का दूसरा नियम आसान भाषा में समझाइए..."
+      ></textarea>
+
+      <button class="voice-button" id="voiceButton" type="button">
+        🎤 बोलकर सवाल लिखें
+      </button>
+
+      <button class="ask-button" id="askButton" type="button">
+        सवाल पूछें →
+      </button>
+
+      <button class="clear-button" id="clearButton" type="button">
+        सवाल साफ करें
+      </button>
+
+      <div id="response" role="status" aria-live="polite"></div>
+
+      <p class="notice">
+        नोट: यह शुरुआती संस्करण है। अभी AI उत्तर देने की सुविधा कनेक्ट नहीं हुई है।
+        इसे अगले चरण में सुरक्षित AI बैकएंड से जोड़ा जाएगा।
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>💡 पढ़ाई की सलाह</h2>
+      <p class="description">
+        पहले कॉन्सेप्ट समझें, फिर NCERT पढ़ें और अंत में NEET के प्रश्नों का अभ्यास करें।
+        जिन प्रश्नों में गलती हो, उन्हें दोबारा रिवाइज करें।
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    NEET Saathi · Learn with clarity. Practise with confidence.<br>
+    पढ़ाई के लिए AI से मिले उत्तरों को NCERT से सत्यापित करें।
+  </footer>
+
+  <script>
+    const subject = document.getElementById("subject");
+    const question = document.getElementById("question");
+    const response = document.getElementById("response");
+
+    document.getElementById("askButton").addEventListener("click", function () {
+      const text = question.value.trim();
+
+      response.style.display = "block";
+
+      if (!text) {
+        response.textContent = "कृपया पहले अपना सवाल लिखें।";
+        question.focus();
+        return;
+      }
+
+      response.textContent =
+        "आपका " + subject.value + " का सवाल दर्ज हो गया है। " +
+        "अभी असली AI उत्तर देने की सुविधा कनेक्ट नहीं है। " +
+        "अगले चरण में Dhruva Sir को AI से जोड़ेंगे।";
+    });
+
+    document.getElementById("clearButton").addEventListener("click", function () {
+      question.value = "";
+      response.style.display = "none";
+      question.focus();
+    });
+
+    document.getElementById("voiceButton").addEventListener("click", function () {
+      const SpeechRecognition =
+        window.SpeechRecognition || window.webkitSpeechRecognition;
+
+      if (!SpeechRecognition) {
+        response.style.display = "block";
+        response.textContent =
+          "आपके ब्राउज़र में Voice Input उपलब्ध नहीं है। " +
+          "कृपया Chrome में कोशिश करें या सवाल टाइप करें।";
+        return;
+      }
+
+      const recognition = new SpeechRecognition();
+      recognition.lang = "hi-IN";
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+
+      response.style.display = "block";
+      response.textContent = "सुन रहा हूँ... अब अपना सवाल बोलिए।";
+
+      recognition.onresult = function (event) {
+        const spokenText = event.results[0][0].transcript;
+        question.value = question.value
+          ? question.value + " " + spokenText
+          : spokenText;
+
+        response.textContent = "आपका सवाल लिख दिया गया है। अब 'सवाल पूछें' दबाएँ।";
+      };
+
+      recognition.onerror = function () {
+        response.textContent =
+          "आवाज़ पहचानने में समस्या हुई। माइक्रोफोन की अनुमति जाँचें या सवाल टाइप करें।";
+      };
+
+      recognition.start();
+    });
+  </script>
+</body>
+</html>
+```
