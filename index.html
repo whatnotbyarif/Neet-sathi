@@ -1,68 +1,185 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NEET Saathi | Your Success, Our Mission</title>
 <style>
-:root{--navy:#0b1030;--navy2:#101946;--indigo:#4f46e5;--violet:#8b5cf6;--cyan:#22d3ee;--ink:#1b1b3a;--muted:#5f6384;--bg:#f1f2fb}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,"Noto Sans",sans-serif;background:var(--bg);color:var(--ink)}a{text-decoration:none;color:inherit}button{font:inherit;cursor:pointer}.layout{display:grid;grid-template-columns:220px 1fr;min-height:100vh}.sidebar{background:linear-gradient(180deg,#080e28,#111a40);color:#fff;padding:24px 16px;display:flex;flex-direction:column;gap:28px}.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px}.brand-icon{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:grid;place-items:center;font-size:21px}.brand small{display:block;color:#aab6df;font-size:10px;font-weight:500;margin-top:3px}.nav{display:grid;gap:8px}.nav a{display:flex;align-items:center;gap:12px;padding:12px 13px;border-radius:12px;color:#d5dcf8;font-size:13px;transition:.2s}.nav a:hover,.nav a.active{background:#293c85;color:#fff}.nav span{font-size:17px;width:20px;text-align:center}.sidebar-card{margin-top:auto;border:1px solid #2c4a91;background:#0c1a43;padding:16px;border-radius:15px;font-size:12px;line-height:1.6}.sidebar-card strong{display:block;font-size:14px}.tag{display:inline-block;background:#3b4fc5;border-radius:20px;padding:4px 9px;font-size:10px;margin-top:8px}.main{min-width:0}.topbar{height:68px;display:flex;align-items:center;justify-content:flex-end;gap:14px;padding:0 30px;background:#fff;border-bottom:1px solid #e5e7f5;font-size:12px}.avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#fde68a,#fb7185);display:grid;place-items:center;font-size:18px}.hero{background:radial-gradient(circle at 78% 35%,#4b35a4 0,transparent 24%),radial-gradient(circle at 20% 10%,#174e9b 0,transparent 30%),linear-gradient(115deg,#080e29,#101944 70%,#090f2b);color:#fff;padding:45px 5% 42px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:25px;overflow:hidden;position:relative}.eyebrow{color:#8eeaff;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}.hero h1{font-size:clamp(32px,4vw,54px);line-height:1.08;margin:15px 0}.hero h1 span{color:#a99aff}.hero p{color:#c6d2f3;line-height:1.7;max-width:540px;font-size:15px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:25px 0}.btn{border:0;border-radius:13px;padding:14px 19px;font-weight:700;font-size:13px;display:inline-flex;align-items:center;justify-content:center;gap:8px}.primary{background:linear-gradient(135deg,var(--indigo),var(--violet));color:#fff;box-shadow:0 8px 22px #4f46e544}.secondary{background:#fff;color:var(--indigo)}.points{display:flex;flex-wrap:wrap;gap:17px;color:#d8e0ff;font-size:11px}.points span:before{content:"✓";color:#4ee2c2;font-weight:bold;margin-right:7px}.mascot-wrap{display:flex;align-items:center;justify-content:center;min-height:260px;position:relative}.glow{width:min(290px,80%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#316bd5 0,#273b8b 45%,#171c4c 70%,transparent 72%);display:grid;place-items:center;position:relative}.teacher{width:190px;height:235px;position:relative;display:flex;flex-direction:column;align-items:center}.hair{position:absolute;top:7px;width:105px;height:66px;background:#17172a;border-radius:55% 50% 30% 25%;z-index:3;transform:rotate(-4deg)}.face{position:absolute;top:25px;width:91px;height:104px;background:linear-gradient(135deg,#f8c9a1,#d98b65);border-radius:44% 44% 47% 47%;z-index:4;box-shadow:inset -8px -2px 0 #c87958}.ear{position:absolute;top:67px;width:17px;height:25px;border-radius:50%;background:#d98b65;z-index:3}.ear.l{left:37px}.ear.r{right:37px}.eyes{position:absolute;top:65px;z-index:5;display:flex;gap:26px}.eyes i{width:8px;height:10px;background:#17172a;border-radius:50%;box-shadow:2px 1px #fff}.glasses{position:absolute;top:60px;z-index:6;width:72px;height:26px;border:2px solid #dbeafe;border-radius:8px;opacity:.9}.smile{position:absolute;top:96px;z-index:6;width:25px;height:11px;border-bottom:3px solid #8d3f38;border-radius:0 0 50% 50%}.neck{position:absolute;top:119px;width:32px;height:29px;background:#d98b65;z-index:2}.coat{position:absolute;top:137px;width:142px;height:95px;border-radius:35px 35px 9px 9px;background:linear-gradient(100deg,#fff,#dbe7ff);z-index:3;box-shadow:0 10px 18px #050a2555}.shirt{position:absolute;top:138px;width:56px;height:86px;background:#182957;clip-path:polygon(0 0,100% 0,70% 100%,30% 100%);z-index:4}.lapel{position:absolute;top:140px;width:34px;height:65px;background:#f8fafc;z-index:5;clip-path:polygon(0 0,100% 10%,40% 100%)}.lapel.one{left:34px}.lapel.two{right:34px;transform:scaleX(-1)}.book{position:absolute;top:174px;right:0;z-index:7;width:65px;height:43px;background:#1c2b55;border:3px solid #c5d5ff;border-radius:5px;transform:rotate(-8deg)}.mascot-label{position:absolute;bottom:-5px;background:#fff;color:#17214a;border-radius:12px;padding:9px 18px;text-align:center;box-shadow:0 8px 20px #0003;font-size:12px;font-weight:800}.mascot-label small{display:block;color:#6b7191;font-size:10px;font-weight:500;margin-top:3px}.speech{position:absolute;right:-10px;top:25px;max-width:155px;background:#111c48;border:1px solid #5269d8;padding:12px;border-radius:14px;font-size:11px;line-height:1.5;color:#e6eaff}.content{padding:27px 30px 40px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:10px;margin-bottom:16px}.section-head h2{margin:0;font-size:20px}.section-head p{margin:6px 0 0;color:var(--muted);font-size:12px}.text-link{color:var(--indigo);font-weight:700;font-size:12px}.quick-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}.quick-card{background:#fff;border:1px solid #e6e8fa;border-radius:17px;padding:18px 15px;min-height:142px;transition:.2s}.quick-card:hover{transform:translateY(-3px);box-shadow:0 12px 25px #4f46e51c}.quick-icon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:#eeedff;color:#5145e5;font-size:19px;margin-bottom:15px}.quick-card:nth-child(2) .quick-icon{background:#e4f5ff;color:#1685c5}.quick-card:nth-child(3) .quick-icon{background:#fff0f4;color:#e34f85}.quick-card:nth-child(4) .quick-icon{background:#e1fbf8;color:#0c9c9b}.quick-card:nth-child(5) .quick-icon{background:#fff5db;color:#b77808}.quick-card strong{display:block;font-size:13px;margin-bottom:6px}.quick-card p{margin:0;color:var(--muted);font-size:11px;line-height:1.5}.bottom-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:24px}.panel{background:#fff;border:1px solid #e6e8f7;border-radius:18px;padding:22px}.panel h3{font-size:16px;margin:0 0 7px}.panel-sub{font-size:12px;color:var(--muted);margin:0 0 18px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.step{background:#f7f7ff;border-radius:13px;padding:14px}.step b{display:block;font-size:12px;margin:10px 0 5px}.step p{font-size:11px;color:var(--muted);line-height:1.5;margin:0}.step-num{width:30px;height:30px;display:grid;place-items:center;background:#e6e5ff;color:#4f46e5;border-radius:10px;font-weight:800}.progress-row{display:flex;justify-content:space-between;font-size:12px;margin:15px 0 8px}.bar{height:8px;border-radius:20px;background:#e9eaf7;overflow:hidden}.bar span{display:block;width:35%;height:100%;background:linear-gradient(90deg,#4f46e5,#22d3ee);border-radius:20px}.mini-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:17px}.stat{background:#f7f8ff;padding:13px;border-radius:12px}.stat strong{font-size:21px;display:block}.stat small{font-size:11px;color:var(--muted)}footer{text-align:center;color:#8589a6;font-size:11px;padding:0 20px 25px}
-@media(max-width:1050px){.layout{grid-template-columns:185px 1fr}.quick-grid{grid-template-columns:repeat(3,1fr)}.hero{padding:35px 4%}.speech{right:-15px}.content{padding:24px 20px}}
-@media(max-width:720px){.layout{display:block}.sidebar{padding:12px;gap:12px}.brand{font-size:17px}.nav{display:flex;overflow-x:auto;gap:6px;padding-bottom:2px}.nav a{white-space:nowrap;padding:10px;font-size:12px}.nav span{font-size:15px}.sidebar-card{display:none}.topbar{height:52px;padding:0 15px}.hero{grid-template-columns:1fr;padding:30px 22px 20px}.hero h1{font-size:37px}.hero p{font-size:13px}.mascot-wrap{min-height:250px}.speech{right:0;top:0}.content{padding:22px 14px}.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.quick-card{padding:14px;min-height:130px}.bottom-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.section-head h2{font-size:18px}}
-@media(max-width:370px){.quick-grid{grid-template-columns:1fr}.hero h1{font-size:32px}.points{gap:9px}}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f1f2fb;color:#1b1b3a}
+a{text-decoration:none;color:inherit}
+.layout{min-height:100vh;display:grid;grid-template-columns:220px 1fr}
+.sidebar{background:#0b1030;color:white;padding:22px 14px}
+.brand{font-size:21px;font-weight:bold;display:block;margin-bottom:30px}
+.brand small{display:block;font-size:11px;color:#aab6df;margin-top:5px}
+.nav a{display:block;padding:13px 12px;margin:7px 0;border-radius:10px;color:#d5dcf8;font-size:14px}
+.nav a:hover,.nav .active{background:#293c85;color:white}
+.main{min-width:0}
+.topbar{background:white;padding:17px 25px;text-align:right;font-size:13px}
+.hero{background:radial-gradient(circle at 80% 20%,#4b35a4,transparent 35%),linear-gradient(115deg,#080e29,#101944);color:white;padding:42px 5%;display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:20px}
+.eyebrow{font-size:12px;letter-spacing:1.5px;color:#8eeaff;text-transform:uppercase}
+h1{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:18px 0}
+h1 span{color:#a99aff}
+.hero p{color:#c6d2f3;line-height:1.8;font-size:14px}
+.btn{display:inline-block;padding:14px 18px;border-radius:12px;margin:12px 8px 12px 0;font-size:13px;font-weight:bold}
+.primary{background:#7650ed;color:white}
+.secondary{background:white;color:#4f46e5}
+.teacher-art{text-align:center;font-size:105px;padding:25px 0}
+.teacher-art strong{display:block;font-size:18px;color:#c4b5fd}
+.teacher-art small{font-size:12px;color:#e0e7ff}
+.content{padding:26px}
+.section-head{margin-bottom:18px}
+.section-head h2{margin:0 0 7px}
+.section-head p{margin:0;color:#6b7191;font-size:13px}
+.quick-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.quick-card{display:block;background:white;border:1px solid #e6e8fa;border-radius:16px;padding:19px;min-height:135px;transition:.2s}
+.quick-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px #4f46e51c}
+.icon{font-size:25px;margin-bottom:12px}
+.quick-card strong{display:block;font-size:15px;margin-bottom:8px}
+.quick-card p{font-size:12px;line-height:1.6;color:#6b7191;margin:0}
+.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.panel{background:white;border:1px solid #e6e8fa;border-radius:16px;padding:20px}
+.panel p{color:#6b7191;font-size:13px;line-height:1.7}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.step{background:#f5f5ff;border-radius:10px;padding:12px;font-size:12px;line-height:1.5}
+.num{color:#6252d5;font-weight:bold;font-size:18px}
+footer{text-align:center;padding:24px;color:#8589a6;font-size:11px;line-height:1.8}
+@media(max-width:700px){
+.layout{display:block}
+.sidebar{padding:14px 10px}
+.brand{margin-bottom:12px;font-size:19px}
+.nav{display:flex;gap:5px;overflow-x:auto}
+.nav a{white-space:nowrap;padding:11px 12px;font-size:12px;margin:0}
+.hero{grid-template-columns:1fr;padding:30px 22px}
+.teacher-art{padding:8px 0;font-size:75px}
+.content{padding:18px 13px}
+.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.quick-card{padding:14px;min-height:130px}
+.bottom-grid{grid-template-columns:1fr}
+.steps{grid-template-columns:1fr}
+}
+@media(max-width:360px){.quick-grid{grid-template-columns:1fr}h1{font-size:30px}}
 </style>
 </head>
 <body>
 <div class="layout">
+
 <aside class="sidebar">
-<a class="brand" href="index.html"><span class="brand-icon">🎓</span><span>NEET Saathi<small>Your Success, Our Mission</small></span></a>
-<nav class="nav" aria-label="Main navigation">
-<a class="active" href="index.html"><span>⌂</span>Home</a>
-<a href="#ai-teacher"><span>♙</span>AI Teacher</a>
-<a href="#mock-test"><span>▣</span>Mock Test</a>
-<a href="#galti-notebook"><span>▤</span>Galti Notebook</a>
-<a href="#weak-topics"><span>◉</span>Weak Topics</a>
-<a href="#daily-plan"><span>▦</span>Daily Plan</a>
+<a class="brand" href="index.html">
+🎓 NEET Saathi
+<small>Your Success, Our Mission</small>
+</a>
+
+<nav class="nav">
+<a class="active" href="index.html">⌂ Home</a>
+<a href="teacher.html">♙ AI Teacher</a>
+<a href="#mock-test">▣ Mock Test</a>
+<a href="#galti-notebook">▤ Galti Notebook</a>
+<a href="#weak-topics">◉ Weak Topics</a>
+<a href="#daily-plan">▦ Daily Plan</a>
 </nav>
-<div class="sidebar-card"><strong>Dream. Prepare. Achieve.</strong>Small steps every day lead to big results.<br><span class="tag">NEET UG 2027</span></div>
 </aside>
+
 <main class="main">
-<header class="topbar"><span>🔔</span><span class="avatar">👩🏻‍🎓</span><strong>Hi, Student</strong><span>⌄</span></header>
+<header class="topbar">🔔 &nbsp; 👩🏻‍🎓 &nbsp; Hi, Student</header>
+
 <section class="hero">
 <div>
 <div class="eyebrow">Your personal NEET study companion</div>
 <h1>Hello, Future Doctor!<br>Welcome to<br><span>NEET Saathi</span></h1>
 <p>Learn smarter with Dhruva Sir, practise exam-style questions, and turn your daily effort into confident progress.</p>
-<div class="hero-actions"><a class="btn primary" href="#ai-teacher">Ask your doubt <span>→</span></a><a class="btn secondary" href="#mock-test">Take a mock test</a></div>
-<div class="points"><span>Step-by-step explanations</span><span>Practice at your pace</span><span>Track your progress</span></div>
+
+<a class="btn primary" href="teacher.html">Ask your doubt →</a>
+<a class="btn secondary" href="#mock-test">Take a mock test</a>
+
+<p>✓ Step-by-step explanations<br>
+✓ Practice at your pace<br>
+✓ Track your progress</p>
 </div>
-<div class="mascot-wrap" aria-label="Illustration of Dhruva Sir, your AI teacher">
-<div class="glow"><div class="teacher"><div class="hair"></div><div class="ear l"></div><div class="ear r"></div><div class="face"></div><div class="eyes"><i></i><i></i></div><div class="glasses"></div><div class="smile"></div><div class="neck"></div><div class="coat"></div><div class="shirt"></div><div class="lapel one"></div><div class="lapel two"></div><div class="book"></div></div></div>
-<div class="speech">Hi! I'm Dhruva Sir.<br>Your AI teacher for Physics, Chemistry and Biology.</div>
-<div class="mascot-label">Dhruva Sir<small>Your all-subject teacher · Online</small></div>
+
+<div class="teacher-art">
+👨‍🏫
+<strong>Dhruva Sir</strong>
+<small>Your all-subject teacher</small>
 </div>
 </section>
+
 <section class="content">
-<div class="section-head"><div><h2>Quick Access</h2><p>Everything you need to prepare, all in one place.</p></div><a class="text-link" href="#features">Explore features →</a></div>
-<div class="quick-grid" id="features">
-<a class="quick-card" href="#ai-teacher"><div class="quick-icon">✦</div><strong>AI Teacher</strong><p>Ask doubts and learn step by step.</p></a>
-<a class="quick-card" href="#mock-test"><div class="quick-icon">▣</div><strong>Mock Test</strong><p>Practise with a NEET-style test layout.</p></a>
-<a class="quick-card" href="#galti-notebook"><div class="quick-icon">▤</div><strong>Galti Notebook</strong><p>Review mistakes and learn from them.</p></a>
-<a class="quick-card" href="#weak-topics"><div class="quick-icon">◉</div><strong>Weak Topics</strong><p>Focus on topics that need more practice.</p></a>
-<a class="quick-card" href="#daily-plan"><div class="quick-icon">▦</div><strong>Daily Plan</strong><p>Build a consistent study routine.</p></a>
+<div class="section-head">
+<h2>Quick Access</h2>
+<p>Everything you need to prepare, all in one place.</p>
 </div>
+
+<div class="quick-grid">
+
+<a class="quick-card" href="teacher.html">
+<div class="icon">✦</div>
+<strong>AI Teacher</strong>
+<p>Ask doubts and learn step by step.</p>
+</a>
+
+<a class="quick-card" href="#mock-test">
+<div class="icon">📝</div>
+<strong>Mock Test</strong>
+<p>Practise with a NEET-style test layout.</p>
+</a>
+
+<a class="quick-card" href="#galti-notebook">
+<div class="icon">📒</div>
+<strong>Galti Notebook</strong>
+<p>Review mistakes and learn from them.</p>
+</a>
+
+<a class="quick-card" href="#weak-topics">
+<div class="icon">🎯</div>
+<strong>Weak Topics</strong>
+<p>Focus on topics that need more practice.</p>
+</a>
+
+<a class="quick-card" href="#daily-plan">
+<div class="icon">📅</div>
+<strong>Daily Plan</strong>
+<p>Build a consistent study routine.</p>
+</a>
+
+</div>
+
 <div class="bottom-grid">
-<div class="panel"><h3>3 simple steps to get started</h3><p class="panel-sub">A clear path from doubt to confidence.</p><div class="steps">
-<div class="step"><div class="step-num">01</div><b>Ask your doubt</b><p>Type a question or use a photo when you need help.</p></div>
-<div class="step"><div class="step-num">02</div><b>Understand the concept</b><p>Break down difficult ideas into simple steps.</p></div>
-<div class="step"><div class="step-num">03</div><b>Practise and improve</b><p>Test yourself and revise what you missed.</p></div>
-</div></div>
-<div class="panel"><h3>Your study journey</h3><p class="panel-sub">Your progress summary will appear here as you practise.</p><div class="progress-row"><span>Getting started</span><strong>Ready to begin</strong></div><div class="bar"><span></span></div><div class="mini-stats"><div class="stat"><strong>—</strong><small>Tests completed</small></div><div class="stat"><strong>—</strong><small>Topics mastered</small></div></div></div>
+<div class="panel">
+<h3>3 simple steps to get started</h3>
+<p>A clear path from doubt to confidence.</p>
+<div class="steps">
+<div class="step"><div class="num">01</div><b>Ask your doubt</b><p>Write your question.</p></div>
+<div class="step"><div class="num">02</div><b>Understand</b><p>Learn concepts step by step.</p></div>
+<div class="step"><div class="num">03</div><b>Practise</b><p>Revise and improve.</p></div>
 </div>
-<div id="ai-teacher" style="height:1px"></div><div id="mock-test" style="height:1px"></div><div id="galti-notebook" style="height:1px"></div><div id="weak-topics" style="height:1px"></div><div id="daily-plan" style="height:1px"></div>
+</div>
+
+<div class="panel">
+<h3>Your study journey</h3>
+<p>Your progress summary will appear here as you practise.</p>
+<b>Getting started</b>
+<div style="background:#e9eaf7;height:8px;border-radius:10px;margin-top:12px">
+<div style="width:10%;height:8px;background:#7650ed;border-radius:10px"></div>
+</div>
+<p>Tests completed: —<br>Topics mastered: —</p>
+</div>
+</div>
+
+<div id="mock-test"></div>
+<div id="galti-notebook"></div>
+<div id="weak-topics"></div>
+<div id="daily-plan"></div>
 </section>
-<footer>NEET Saathi · Learn with clarity. Practise with confidence. · AI answers should be verified with NCERT or a teacher.</footer>
+
+<footer>
+NEET Saathi · Learn with clarity. Practise with confidence.<br>
+AI answers should be verified with NCERT or a teacher.
+</footer>
+
 </main>
 </div>
 </body>
 </html>
+```
